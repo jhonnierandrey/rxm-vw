@@ -6,6 +6,7 @@
     <FilterByStatus />
     <FilterByName />
     <ListCharacters />
+    <Footer />
   </div>
 </template>
 
@@ -13,14 +14,17 @@
 import ListCharacters from '@/components/ListCharacters'
 import FilterByStatus from '@/components/FilterByStatus'
 import FilterByName from '@/components/FilterByName'
+import Footer from '@/components/Footer'
 
 export default {
+  title: 'Rick And Morty with Vue',
   name: 'App',
   components: {
     ListCharacters,
     FilterByStatus,
-    FilterByName
-  }
+    FilterByName,
+    Footer
+  },
 }
 </script>
 
