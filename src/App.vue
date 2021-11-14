@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <h1>Rick And Morty</h1>
+    <div class="logo-container">
+      <a href="https://rickandmortyapi.com/" target="_blank" title="Visit API"><img src="rxm_logo.svg" alt="Rick And Morty" srcset=""></a>
+    </div>
     <FilterByStatus />
     <FilterByName />
     <ListCharacters />
@@ -24,11 +26,13 @@ export default {
 
 <style lang="scss">
 :root{
-  --background-body: #24282F;
-  --background-card: #3C3E44;
+  // --background-body: #24282F;
+  --background-body: #181c2b;
+  --background-card: rgba(60, 62, 68, 0.5);
   --text-white: #FFFFFF;
   --text-gray : #C0C0C0;
-  --text-orange: #FF9800
+  --text-orange: #FF9800;
+  --border-yellow: #BFDE42;
 }
 
 * {
@@ -38,7 +42,10 @@ export default {
 }
 
 body {
+  background-image: url('/background.png');
   background-color: var(--background-body);
+  background-blend-mode: hard-light;
+  background-size: cover;
   color: var(--text-white);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -52,6 +59,20 @@ h1 {
   width: 980px;
   max-width: 90%;
   margin: 3rem auto;
+
+  .logo-container {
+    text-align: center;
+    
+    img {
+      padding-bottom: 1rem;
+      width: 50%;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 200ms ease-in-out;
+      }
+    }
+  }
 }
 
 img {

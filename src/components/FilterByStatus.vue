@@ -1,7 +1,7 @@
 <template>
   <div class="filter">
       <div class="item" @click="filter('')">
-          ALL
+          All
       </div>
       <div class="item" @click="filter('Alive')">
           Alive
@@ -40,14 +40,17 @@ export default {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border-radius: 10px;
+    border: 1px solid var(--border-yellow);
     overflow: hidden;
+    background-color: var(--background-card);
+
     .item {
         padding: 1rem 0.5rem;
-        background-color: var(--background-card);
         text-align: center;
         cursor: pointer;
         &:hover {
-            color: var(--text-orange)
+            color: var(--text-orange);
+            transform: scale(1.2);
         }
     }
 }
